@@ -1,3 +1,12 @@
+# AstreaGalaxy
+
+This is a fork of [Archipelago](https://github.com/ArchipelagoMW/Archipelago) to build the world for the game [Astrea](https://store.steampowered.com/app/1755830/Astrea_SixSided_Oracles/).
+
+Requires the [Archipelago plugin for Astrea](https://github.com/MazelessMinotaur/AstreaArchipelago)
+
+This is a very basic proof of concept and likely to change.
+
+
 # [Archipelago](https://archipelago.gg) ![Discord Shield](https://discordapp.com/api/guilds/731205301247803413/widget.png?style=shield) | [Install](https://github.com/ArchipelagoMW/Archipelago/releases)
 
 Archipelago provides a generic framework for developing multiworld capability for game randomizers. In all cases,
