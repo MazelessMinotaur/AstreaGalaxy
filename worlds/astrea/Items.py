@@ -24,12 +24,12 @@ class AstreaItem(Item):
     game = "Astrea"
 
 item_table = {
-    "77 Star Shards": AstreaItemData(AstreaItemClassification.StarShards, ItemClassification.filler, 0, 0), # dumb testing
-    "Epic Dice Choice": AstreaItemData(AstreaItemClassification.Dice, ItemClassification.useful, 2, 1),
-    "Standard Dice Choice": AstreaItemData(AstreaItemClassification.Dice, ItemClassification.filler, 0, 2), # this is broken, use 0
-    "Regular Blessing": AstreaItemData(AstreaItemClassification.Blessing, ItemClassification.useful, 3, 3),
-    "BlackHole Blessing": AstreaItemData(AstreaItemClassification.Blessing, ItemClassification.useful, 2, 4),
-    "Duplicate Dice": AstreaItemData(AstreaItemClassification.DuplicateDice, ItemClassification.filler, 1, 5),
+    "77 Star Shards": AstreaItemData(AstreaItemClassification.StarShards, ItemClassification.filler, 1, 0), # dumb testing
+    "Epic Dice Choice": AstreaItemData(AstreaItemClassification.Dice, ItemClassification.useful, 5, 1),
+    "Standard Dice Choice": AstreaItemData(AstreaItemClassification.Dice, ItemClassification.filler, 5, 2), # this is fixed?
+    "Regular Blessing": AstreaItemData(AstreaItemClassification.Blessing, ItemClassification.useful, 6, 3),
+    "BlackHole Blessing": AstreaItemData(AstreaItemClassification.Blessing, ItemClassification.useful, 4, 4),
+    "Duplicate Dice": AstreaItemData(AstreaItemClassification.DuplicateDice, ItemClassification.filler, 2, 5),
     "Forge Draw": AstreaItemData(AstreaItemClassification.Forge, ItemClassification.filler, 2, 6),
 }
 
