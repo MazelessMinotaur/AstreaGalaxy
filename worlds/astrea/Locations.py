@@ -1,19 +1,32 @@
 from typing import Dict, NamedTuple, Set, Optional
 
 from BaseClasses import Location
+from enum import Enum, IntEnum
+from copy import deepcopy
+
 starting_location_id = 119201851000
+
+class LocationCharacter(IntEnum):
+    Any = 1
+    Moonie = 2
+    Cellierues = 3
+    Hellevius = 4
+    Austra = 5
+    Sothis = 6
+    Orion = 7
+
 
 class AstreaLocationData(NamedTuple):
     chapter: int
     battle: int
-    difficult: bool
-    boss: bool
-
+    difficult: bool = False
+    boss: bool = False
+    event: bool = False
+    character: LocationCharacter = 1
 
 pratice_location_table = {f'Location {x}': x for x in range(1, 60)}
 
-
-location_table ={
+base_location_table ={
     "Tainted Reef Fight 1 - First reward": AstreaLocationData(1,1, False, False),
     "Tainted Reef Fight 1 - Second reward": AstreaLocationData(1,1, False, False),
     "Tainted Reef Fight 2 - First reward": AstreaLocationData(1,2, False, False),
@@ -42,6 +55,23 @@ location_table ={
     "Ground Zero Boss Fight - Second reward": AstreaLocationData(3, 3, False, True),
     "Ground Zero Boss Fight - Third reward": AstreaLocationData(3, 3, False, True),
 }
+
+event_table = {
+    "Tainted Reef Boss Victory": AstreaLocationData(1,4),
+    "Astropolis Ruins Boss Victory": AstreaLocationData(2,3),
+    "Ground Zero Boss Victory": AstreaLocationData(3,3),
+    "Astrea Purified": AstreaLocationData(4,2),
+}
+
+location_table = base_location_table
+for x in range(7):
+    name = LocationCharacter(x).name
+    for k, v in base_location_table.items():
+        key = k + " - " + name
+        value = deepcopy(v)
+        value.character = x
+        location_table[key] = value
+
 
 location_name_to_id: Dict[str, int] = {name: starting_location_id + index for index, name in enumerate(location_table)}
 
