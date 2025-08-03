@@ -40,8 +40,7 @@ base_item_table = {
     "Standard Dice Choice": AstreaItemData(AstreaItemClassification.Dice, ItemClassification.filler, 20, 2),
     "Regular Blessing": AstreaItemData(AstreaItemClassification.Blessing, ItemClassification.useful, 4, 3),
     "BlackHole Blessing": AstreaItemData(AstreaItemClassification.Blessing, ItemClassification.useful, 3, 4),
-    "Sentienel": AstreaItemData(AstreaItemClassification.Blessing, ItemClassification.useful, 3, 4),
-
+    "Sentinel": AstreaItemData(AstreaItemClassification.Blessing, ItemClassification.useful, 3, 4),
 }
 
 item_table = testing_item_table

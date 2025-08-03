@@ -9,8 +9,8 @@ starting_location_id = 119201851000
 class LocationCharacter(IntEnum):
     Any = 1
     Moonie = 2
-    Cellierues = 3
-    Hellevius = 4
+    Cellarius = 3
+    Hevelius = 4
     Austra = 5
     Sothis = 6
     Orion = 7
@@ -64,13 +64,13 @@ event_table = {
 }
 
 location_table = base_location_table
-for x in range(7):
-    name = LocationCharacter(x).name
-    for k, v in base_location_table.items():
-        key = k + " - " + name
-        value = deepcopy(v)
-        value.character = x
-        location_table[key] = value
+# for x in range(7):
+#     name = LocationCharacter(x).name
+#     for k, v in base_location_table.items():
+#         key = k + " - " + name
+#         value = deepcopy(v)
+#         value.character = x
+#         location_table[key] = value
 
 
 location_name_to_id: Dict[str, int] = {name: starting_location_id + index for index, name in enumerate(location_table)}

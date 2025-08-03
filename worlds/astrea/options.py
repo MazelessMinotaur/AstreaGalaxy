@@ -113,8 +113,8 @@ class MaxChoiceRewards(Range):
 @dataclass
 class AstreaOptions(PerGameCommonOptions):
     double_shards: DoubleStarShards
-    wins_required: WinsRequire
-    player_oracles: PlayerOracles
-    shared_item_pool: SharedItemPool
-    reward_order: RewardOrder
-    max_choice_rewards: MaxChoiceRewards
+    # wins_required: WinsRequire
+    # player_oracles: PlayerOracles
+    # shared_item_pool: SharedItemPool
+    # reward_order: RewardOrder
+    # max_choice_rewards: MaxChoiceRewards
